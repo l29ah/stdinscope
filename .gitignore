@@ -1,0 +1,6 @@
+*.sw?
+*.o
+moc_*
+.qmake.*
+Makefile
+stdinscope
