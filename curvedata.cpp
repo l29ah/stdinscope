@@ -3,25 +3,25 @@
 
 const SignalData &CurveData::values() const
 {
-    return SignalData::instance();
+	return SignalData::instance();
 }
 
 SignalData &CurveData::values()
 {
-    return SignalData::instance();
+	return SignalData::instance();
 }
 
 QPointF CurveData::sample( size_t i ) const
 {
-    return SignalData::instance().value( i );
+	return SignalData::instance().value( i );
 }
 
 size_t CurveData::size() const
 {
-    return SignalData::instance().size();
+	return SignalData::instance().size();
 }
 
 QRectF CurveData::boundingRect() const
 {
-    return SignalData::instance().boundingRect();
+	return SignalData::instance().boundingRect();
 }

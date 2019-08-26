@@ -6,27 +6,27 @@ class WheelBox;
 
 class MainWindow : public QWidget
 {
-    Q_OBJECT
+	Q_OBJECT
 
 public:
-    MainWindow( QWidget * = NULL );
+	MainWindow( QWidget * = NULL );
 
-    void start();
+	void start();
 
-    double amplitude() const;
-    double frequency() const;
-    double signalInterval() const;
+	double amplitude() const;
+	double frequency() const;
+	double signalInterval() const;
 
 Q_SIGNALS:
-    void amplitudeChanged( double );
-    void frequencyChanged( double );
-    void signalIntervalChanged( double );
+	void amplitudeChanged( double );
+	void frequencyChanged( double );
+	void signalIntervalChanged( double );
 
 private:
-    Knob *d_frequencyKnob;
-    Knob *d_amplitudeKnob;
-    WheelBox *d_timerWheel;
-    WheelBox *d_intervalWheel;
+	Knob *d_frequencyKnob;
+	Knob *d_amplitudeKnob;
+	WheelBox *d_timerWheel;
+	WheelBox *d_intervalWheel;
 
-    Plot *d_plot;
+	Plot *d_plot;
 };
