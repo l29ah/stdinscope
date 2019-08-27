@@ -2,10 +2,8 @@
 #include "signaldata.h"
 #include <qwt_math.h>
 #include <math.h>
-
-#if QT_VERSION < 0x040600
-#define qFastSin(x) ::sin(x)
-#endif
+#include <iostream>
+using namespace std;
 
 SamplingThread::SamplingThread( QObject *parent ):
 	QwtSamplingThread( parent ),
@@ -44,10 +42,7 @@ void SamplingThread::sample( double elapsed )
 
 double SamplingThread::value( double timeStamp ) const
 {
-	const double period = 1.0 / d_frequency;
-
-	const double x = ::fmod( timeStamp, period );
-	const double v = d_amplitude * qFastSin( x / period * 2 * M_PI );
-
-	return v;
+	double sample;
+	cin >> sample;
+	return sample;
 }
